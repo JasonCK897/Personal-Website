@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import MoleculeLogo from './MoleculeLogo';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 
 const navLinks = [
@@ -33,17 +34,20 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
           
-          {/* Monogram Brand */}
+          {/* Molecular JCK Engineering Brand */}
           <a 
             href="#home" 
-            className="flex items-center gap-3 group focus:outline-none"
+            className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none"
           >
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-900 dark:bg-sky-400 text-white dark:text-slate-950 flex items-center justify-center font-space font-bold text-xs tracking-wider group-hover:scale-105 transition-transform shadow-sm">
-              JCK
+            <MoleculeLogo className="w-9 h-9 sm:w-10 sm:h-10" />
+            <div className="flex flex-col text-left">
+              <span className="font-space text-sm sm:text-base font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-brand-blue dark:group-hover:text-sky-400 transition-colors leading-tight">
+                Jason Christov Kesuma
+              </span>
+              <span className="text-[9px] sm:text-[10px] font-mono font-bold tracking-widest text-sky-600 dark:text-sky-400 uppercase">
+                JCK ENGINEERING
+              </span>
             </div>
-            <span className="font-space text-base sm:text-lg font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-brand-blue dark:group-hover:text-sky-400 transition-colors">
-              Jason Christov Kesuma
-            </span>
           </a>
 
           {/* Desktop Nav Links */}

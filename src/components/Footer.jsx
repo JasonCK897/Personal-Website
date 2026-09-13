@@ -1,4 +1,5 @@
 import React from 'react';
+import MoleculeLogo from './MoleculeLogo';
 import { contactData } from '../data/portfolio';
 import { Mail, Linkedin, Github, Instagram, ArrowUp } from 'lucide-react';
 
@@ -25,14 +26,17 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-5">
           
           {/* Identity & Copyright */}
-          <div className="text-center md:text-left">
-            <div className="font-space font-bold text-white text-base tracking-tight flex items-center justify-center md:justify-start gap-2">
-              <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-              <span>Jason Christov Kesuma</span>
+          <div className="text-center md:text-left flex items-center justify-center md:justify-start gap-3">
+            <MoleculeLogo className="w-8 h-8 flex-shrink-0 hidden sm:block" />
+            <div>
+              <div className="font-space font-bold text-white text-base tracking-tight flex items-center justify-center md:justify-start gap-2">
+                <span>Jason Christov Kesuma</span>
+                <span className="text-[9px] font-mono font-bold text-sky-400 bg-sky-500/10 px-1.5 py-0.5 rounded border border-sky-400/20">JCK ENGINEERING</span>
+              </div>
+              <p className="text-xs text-slate-400 font-mono mt-0.5">
+                &copy; {currentYear} &bull; Full-Stack Web, Embedded Systems &amp; Intelligent Computing.
+              </p>
             </div>
-            <p className="text-xs text-slate-400 font-mono mt-1">
-              &copy; {currentYear} &bull; Full-Stack Web, Embedded Systems &amp; Intelligent Computing.
-            </p>
           </div>
 
           {/* Social Channels (Clickable icons without raw URLs) */}
