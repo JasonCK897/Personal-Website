@@ -1,51 +1,47 @@
 /**
  * Data Portfolio & Engineering Blog - Jason Christov Kesuma
- * Terpusat dan modular agar mudah diperbarui tanpa menyentuh kode tampilan.
+ * Versi ringkas, padat, dan fokus pada visual serta interaksi langsung.
  */
 
 export const personalData = {
   name: "Jason Christov Kesuma",
   role: "Mahasiswa Teknik Informatika",
-  tagline: "Mahasiswa Teknik Informatika | Embedded Systems, Firmware & Web3 Enthusiast",
-  bio: "Mahasiswa S1 Teknik Informatika di Universitas Ma Chung yang aktif berorganisasi dan mendalami rekayasa firmware, embedded systems, serta arsitektur smart contracts. Memiliki pengalaman langsung memprogram mikrokontroler STM32 & ESP32, analisis ketahanan sinyal noise, dan eksplorasi ekosistem blockchain terdesentralisasi.",
+  tagline: "Embedded Systems • Firmware Engineering • Web3",
+  bio: "Mahasiswa S1 Teknik Informatika di Universitas Ma Chung (Malang). Berfokus pada rekayasa firmware mikrokontroler STM32 & ESP32, mitigasi noise sinyal, serta smart contract di ekosistem Sui.",
   location: "Malang, Indonesia",
   avatar: "/avatar.svg",
   cvUrl: "/cv-jason-christov-kesuma.pdf",
   
-  // Kontak & Media Sosial
   social: {
-    email: "jasonchristov@gmail.com",
+    email: "mailto:jasonchristov@gmail.com",
     linkedin: "https://www.linkedin.com/in/jason-christov-kesuma-a2a19a36b/",
-    linkedinHandle: "linkedin.com/in/jason-christov-kesuma-a2a19a36b",
     github: "https://github.com/JasonCK897",
-    githubHandle: "github.com/JasonCK897",
     instagram: "https://www.instagram.com/j._chrisk/",
-    instagramHandle: "@j._chrisk"
   }
 };
 
 export const educationData = {
   institution: "Universitas Ma Chung",
   location: "Malang, Indonesia",
-  degree: "Bachelor of Informatics Engineering",
-  period: "Agustus 2023 - Agustus 2027 (Expected)",
+  degree: "S1 Teknik Informatika",
+  period: "2023 - 2027 (Expected)",
   gpa: "3.49 / 4.00",
   highlights: [
-    "Fokus studi pada Arsitektur Komputer, Pemrograman Sistem Rendah, dan Analisis Algoritma.",
-    "Riset mandiri dalam ketahanan noise sinyal mikrokontroler dan telemetri nirkabel IoT.",
-    "Aktif dalam kepanitiaan universitas dan riset dosen di laboratorium HMI."
+    "Fokus: Arsitektur Komputer, Pemrograman Sistem Rendah, dan Analisis Algoritma.",
+    "Riset mandiri: Noise immunity mikrokontroler & telemetri nirkabel IoT.",
+    "Aktif dalam riset Human-Machine Interaction (HMI) Ma Chung."
   ]
 };
 
 export const skillsData = {
   programming: [
-    { name: "C/C++", level: "Lanjutan", icon: "SiCplusplus", category: "Embedded / Systems" },
-    { name: "Python", level: "Menengah", icon: "SiPython", category: "General / Data" },
-    { name: "Java", level: "Menengah", icon: "FaJava", category: "OOP Architecture" },
-    { name: "C#", level: "Menengah", icon: "TbBrandCSharp", category: "App & Unity" },
-    { name: "HTML", level: "Lanjutan", icon: "FaHtml5", category: "Web Interface" },
-    { name: "CSS", level: "Menengah", icon: "FaCss3Alt", category: "Web Styling" },
-    { name: "JavaScript", level: "Menengah", icon: "SiJavascript", category: "Frontend & dApp" },
+    { name: "C/C++", level: "Lanjutan", icon: "SiCplusplus", category: "Embedded" },
+    { name: "Python", level: "Menengah", icon: "SiPython", category: "Data / Tools" },
+    { name: "Java", level: "Menengah", icon: "FaJava", category: "OOP" },
+    { name: "C#", level: "Menengah", icon: "TbBrandCSharp", category: "Systems" },
+    { name: "HTML", level: "Lanjutan", icon: "FaHtml5", category: "Web" },
+    { name: "CSS", level: "Menengah", icon: "FaCss3Alt", category: "Styling" },
+    { name: "JavaScript", level: "Menengah", icon: "SiJavascript", category: "Web / dApp" },
   ],
   softSkills: [
     "Project Management",
@@ -62,55 +58,40 @@ export const experienceData = [
     id: "exp-1",
     role: "Asisten Peneliti",
     organization: "Pusat Studi Human-Machine Interaction (HMI)",
-    location: "Malang, Indonesia",
-    period: "Februari 2026 - Juli 2026",
-    description: "Lembaga riset kampus Universitas Ma Chung yang berfokus menciptakan teknologi inklusif, dengan karya unggulan berupa Mouse Difabel, Sarung Tangan Bahasa Isyarat, serta riset Voice Recognition.",
-    highlights: [
-      "Berkolaborasi dalam pengujian antarmuka perangkat keras dan akurasi sensor.",
-      "Mengembangkan pembacaan sinyal sensor untuk perangkat komputasi inklusif."
-    ]
+    location: "Malang",
+    period: "Feb 2026 - Jul 2026",
+    description: "Riset kampus untuk teknologi inklusif: Mouse Difabel, Sarung Tangan Bahasa Isyarat, dan pengujian sinyal sensor.",
   },
   {
     id: "exp-2",
-    role: "Ketua Program Kerja Studi Banding (IF-JOURNEY)",
+    role: "Ketua Program Kerja IF-JOURNEY",
     organization: "Himpunan Teknik Informatika",
-    location: "Surabaya, Indonesia",
-    period: "Juni 2026",
-    description: "Memimpin delegasi 12 anggota himpunan Teknik Informatika dan berkoordinasi dengan pihak Universitas Surabaya.",
-    highlights: [
-      "Mengkoordinir 50 peserta gabungan Ubaya & Ma Chung dalam forum pertukaran kurikulum dan teknologi.",
-      "Memastikan manajemen logistik dan eksekusi acara berjalan tepat waktu."
-    ]
+    location: "Surabaya",
+    period: "Jun 2026",
+    description: "Memimpin 12 anggota tim dalam studi banding ke Universitas Surabaya yang diikuti 50 peserta gabungan.",
   },
   {
     id: "exp-3",
     role: "Panitia Ma Chung Festival 2025",
     organization: "Universitas Ma Chung",
-    location: "Malang, Indonesia",
-    period: "Agustus 2025 - Februari 2026",
-    description: "Event besar tahunan Universitas Ma Chung dalam rangka penerimaan mahasiswa baru.",
-    highlights: [
-      "Memimpin dan berkoordinasi dengan 12 anggota tim panitia himpunan Teknik Informatika.",
-      "Mengelola operasional teknis acara demi kelancaran orientasi mahasiswa baru."
-    ]
+    location: "Malang",
+    period: "Agu 2025 - Feb 2026",
+    description: "Mengelola operasional teknis dan koordinasi antar-divisi kepanitiaan penerimaan mahasiswa baru.",
   }
 ];
 
-// 3 Proyek Utama yang Difokuskan (Firmware, Sui Project, AiDiTech)
+// 3 Proyek Utama (Ringkas, Padat, Visual-First)
 export const projectsData = [
   {
     id: "proj-firmware",
     title: "Project Shasta: Touch Controller Firmware",
-    role: "Firmware & Embedded Developer",
-    period: "September 2026",
+    role: "Firmware Developer",
+    period: "Sep 2026",
     category: "firmware",
-    description: "Touch Controller Noise Immunity Firmware Suite yang menggabungkan ESP32 Wireless Relay dan STM32 Precision Waveform Synthesizer untuk mensimulasikan dan menganalisis kekebalan sinyal sentuh terhadap interferensi elektromagnetik.",
-    tags: ["STM32", "ESP32", "Embedded C++", "Signal Processing", "Firmware", "DAC"],
-    features: [
-      "Sintesis gelombang presisi tinggi via DAC STM32 untuk injeksi noise frekuensi variabel",
-      "Relay telemetri nirkabel real-time menggunakan ESP32 WiFi & BLE stack",
-      "Algoritma penyaringan sinyal digital untuk eliminasi false-touch triggers"
-    ],
+    // 1 kalimat padat:
+    description: "Suite pengujian noise immunity sensor sentuh menggunakan STM32 DAC waveform synthesizer dan ESP32 wireless telemetry relay.",
+    tags: ["STM32", "ESP32", "Embedded C++", "DSP"],
+    metrics: "12-bit DAC • Noise Immunity • Wireless Telemetry",
     demoUrl: "",
     repoUrl: "https://github.com/JasonCK897/ProjectShasta-Firmware",
     isPrivate: true,
@@ -118,17 +99,14 @@ export const projectsData = [
   },
   {
     id: "proj-sui",
-    title: "Sui Blockchain dApp: Library System",
-    role: "Smart Contract & Web3 Developer",
-    period: "November 2025",
+    title: "Sui Blockchain: Library dApp",
+    role: "Move & Web3 Developer",
+    period: "Nov 2025",
     category: "web3",
-    description: "Sistem peminjaman buku perpustakaan terdesentralisasi berbasis jaringan blockchain Sui menggunakan bahasa pemrograman Move, dilengkapi antarmuka frontend reaktif untuk koneksi Web3 wallet dan pencatatan status buku on-chain.",
-    tags: ["Sui Move", "Blockchain", "Smart Contracts", "React", "TypeScript", "Web3"],
-    features: [
-      "Smart contract Move berbasis model objek Sui untuk integritas peminjaman buku",
-      "Integrasi interaktif dengan Sui Wallet Provider untuk penandatanganan transaksi",
-      "Dashboard frontend real-time menampilkan status ketersediaan dan mutasi buku"
-    ],
+    // 1 kalimat padat:
+    description: "Sistem perpustakaan terdesentralisasi on-chain berbasis model objek bahasa Move pada blockchain Sui dengan integrasi React & Sui Wallet.",
+    tags: ["Sui Move", "Blockchain", "React", "TypeScript"],
+    metrics: "Sui Testnet • Sub-second Finality • Web3 Wallet",
     demoUrl: "https://github.com/JasonCK897/SuiProjekD3-Kel4",
     repoUrl: "https://github.com/JasonCK897/SuiProjekD3-Kel4",
     isPrivate: false,
@@ -136,17 +114,14 @@ export const projectsData = [
   },
   {
     id: "proj-aiditech",
-    title: "AiDiTech: Research Center Portal",
-    role: "Anggota Tim Pengembang Web",
-    period: "April 2026 - Juni 2026",
+    title: "AiDiTech: Research Portal & CMS",
+    role: "Web Developer",
+    period: "Apr 2026 - Jun 2026",
     category: "web",
-    description: "Website resmi lembaga riset kecerdasan buatan dan teknologi Universitas Ma Chung yang dipimpin oleh Windra Swastika, S.Kom., MT., Ph.D. Menyediakan katalog repositori artikel ilmiah dan dashboard admin untuk kurasi konten landing page.",
-    tags: ["PHP", "MySQL", "PHPMyAdmin", "Web Architecture", "Admin Dashboard"],
-    features: [
-      "Database relasional MySQL untuk katalog publikasi jurnal dan profil peneliti",
-      "Dashboard administrasi khusus untuk kurasi artikel dan pengelolaan landing page",
-      "Struktur kode modular dan responsif untuk kenyamanan akses civitas akademika"
-    ],
+    // 1 kalimat padat:
+    description: "Portal resmi pusat studi riset Universitas Ma Chung untuk repositori jurnal ilmiah dan manajemen konten landing page.",
+    tags: ["PHP", "MySQL", "PHPMyAdmin", "CMS"],
+    metrics: "Ma Chung Research • Database Relasional • Dashboard Admin",
     demoUrl: "",
     repoUrl: "https://github.com/JasonCK897",
     isPrivate: false,
@@ -154,44 +129,42 @@ export const projectsData = [
   }
 ];
 
-// Blog & Engineering Notes: Ide fitur pengembangan untuk personal blog Jason
 export const blogPostsData = [
   {
     id: "post-1",
     title: "Merancang Touch Controller Tahan Noise dengan STM32 & ESP32",
-    date: "10 September 2026",
-    readTime: "5 menit baca",
+    date: "10 Sep 2026",
+    readTime: "5 mnt",
     category: "Firmware & Embedded",
-    summary: "Catatan rekayasa mengenai cara mengatasi interferensi elektromagnetik pada capacitive touch sensor melalui sintesis noise frekuensi variabel dan digital filtering.",
+    summary: "Catatan mengenai mitigasi noise EMI pada capacitive touch sensor melalui injeksi frekuensi variabel dan digital filtering.",
     content: `Dalam pengembangan perangkat embedded modern, sensor sentuh kapasitif (capacitive touch) seringkali mengalami pembacaan palsu (*false trigger*) akibat noise dari catu daya switching atau radiasi elektromagnetik di sekitar sirkuit.
 
-### 1. Eksperimen Project Shasta
+### 1. Arsitektur Project Shasta
 Pada Project Shasta, kami membagi arsitektur pengujian menjadi dua mikrokontroler:
-- **STM32 Precision Waveform Synthesizer**: Bertugas menghasilkan injeksi sinyal noise melalui DAC internal berkecepatan tinggi dengan berbagai frekuensi (10 kHz - 500 kHz).
+- **STM32 Precision Waveform Synthesizer**: Menghasilkan injeksi sinyal noise melalui DAC internal berkecepatan tinggi dengan berbagai frekuensi (10 kHz - 500 kHz).
 - **ESP32 Wireless Relay**: Membaca respons controller, menghitung Signal-to-Noise Ratio (SNR), dan mengirimkan log telemetri nirkabel secara real-time.
 
 ### 2. Teknik Filtering Digital
-Kami mengimplementasikan **Moving Median Filter** yang dikombinasikan dengan **Exponential Moving Average (EMA)** pada firmware:
+Implementasi **Moving Median Filter** dikombinasikan dengan **Exponential Moving Average (EMA)** pada firmware:
 \`\`\`cpp
-// Cuplikan logika debounce filter pada STM32/ESP32
 float filteredValue = (alpha * rawReading) + ((1.0f - alpha) * previousFilteredValue);
 if (abs(filteredValue - baseline) > TOUCH_THRESHOLD) {
     registerValidTouch();
 }
 \`\`\`
-Pendekatan ini berhasil mengurangi fluktuasi noise hingga 78% tanpa menambah latensi respons sentuh yang berarti.`
+Pendekatan ini berhasil meredam lonjakan noise hingga 78% tanpa menambah latensi respons sentuh yang berarti.`
   },
   {
     id: "post-2",
     title: "Memahami Model Objek Sui Move vs Model Akun EVM",
-    date: "22 November 2025",
-    readTime: "6 menit baca",
+    date: "22 Nov 2025",
+    readTime: "6 mnt",
     category: "Blockchain & Web3",
-    summary: "Analisis komparatif mengapa model pemrograman berbasis objek pada bahasa Move di Sui memberikan keamanan dan skalabilitas lebih tinggi untuk dApp perpustakaan.",
+    summary: "Analisis komparatif mengapa model pemrograman berbasis objek pada bahasa Move di Sui memberikan keamanan dan skalabilitas tinggi.",
     content: `Sebagian besar pengembang terbiasa dengan model akun pada EVM (Ethereum Virtual Machine), di mana saldo dan status tersimpan dalam storage kontrak pintar itu sendiri. Namun, Sui Blockchain mengadopsi paradigma baru: **Object-Centric Model**.
 
-### 1. Semantik Objek di Sui Move
-Di Sui, setiap entitas (seperti buku dalam sistem dApp perpustakaan kami) adalah objek unik yang memiliki UID (*Globally Unique Identifier*) dan status kepemilikan (*Ownership*):
+### Semantik Objek di Sui Move
+Di Sui, setiap entitas (seperti buku dalam dApp perpustakaan kami) adalah objek unik yang memiliki UID (*Globally Unique Identifier*) dan status kepemilikan (*Ownership*):
 \`\`\`move
 struct Book has key, store {
     id: UID,
@@ -200,32 +173,55 @@ struct Book has key, store {
     is_available: bool,
 }
 \`\`\`
-
-### 2. Keuntungan Skalabilitas Paralel
-Karena transaksi di Sui mengeksekusi objek secara eksplisit, transaksi yang memodifikasi objek berbeda dapat diproses secara **paralel tanpa antrean global**. Ini membuat biaya gas sangat efisien dan mencegah race-condition secara arsitektural.`
+Karena transaksi di Sui mengeksekusi objek secara eksplisit, transaksi yang memodifikasi objek berbeda dapat diproses secara **paralel tanpa antrean global**.`
   },
   {
     id: "post-3",
     title: "Arsitektur IoT ESP32: Telemetri Sensor Real-Time ke Web Dashboard",
-    date: "15 Juni 2026",
-    readTime: "4 menit baca",
+    date: "15 Jun 2026",
+    readTime: "4 mnt",
     category: "IoT & Fullstack",
-    summary: "Praktik terbaik membaca 4 sensor analog-digital secara simultan pada ESP32 dan mengirimkannya ke dashboard web pemantauan air.",
-    content: `Membangun perangkat pemantau kualitas air (seperti pada project Aroguard) membutuhkan pembacaan sensor yang stabil dari 4 parameter: suhu, derajat keasaman (pH), kekeruhan (*turbidity*), dan kedalaman air.
+    summary: "Praktik pembacaan sensor simultan pada ESP32 dan pengiriman data ke dashboard web pemantauan air.",
+    content: `Membangun perangkat telemetri membutuhkan pembacaan sensor yang stabil dari multi-parameter.
 
 ### Poin Kunci Keberhasilan:
-1. **Kalibrasi Tegangan Referensi**: ESP32 ADC cenderung non-linear di bawah 0.1V dan di atas 3.1V. Penggunaan kalibrasi kurva polinomial pada firmware menghasilkan pembacaan pH yang jauh lebih presisi.
-2. **Buffer Telemetri & Non-blocking I/O**: Hindari penggunaan \`delay()\`! Gunakan timer interupsi \`millis()\` atau FreeRTOS task scheduler agar ESP32 tetap responsif melayani request HTTP/MQTT.`
+1. **Kalibrasi Non-linear ADC**: ESP32 ADC memerlukan kalibrasi kurva polinomial agar pembacaan tegangan analog akurat.
+2. **Buffer Telemetri & Non-blocking I/O**: Hindari penggunaan \`delay()\`. Gunakan timer interupsi atau FreeRTOS task scheduler agar ESP32 tetap responsif melayani koneksi jaringan.`
   }
 ];
 
+// Kontak dengan Direct Link langsung ke platform (tanpa menampilkan URL mentah)
 export const contactData = {
   email: "jasonchristov@gmail.com",
-  linkedin: "https://www.linkedin.com/in/jason-christov-kesuma-a2a19a36b/",
-  linkedinHandle: "linkedin.com/in/jason-christov-kesuma-a2a19a36b",
-  github: "https://github.com/JasonCK897",
-  githubHandle: "@JasonCK897",
-  instagram: "https://www.instagram.com/j._chrisk/",
-  instagramHandle: "@j._chrisk",
+  channels: [
+    {
+      id: "email",
+      label: "Email",
+      subtitle: "Kirim pesan langsung",
+      url: "mailto:jasonchristov@gmail.com",
+      icon: "Mail",
+    },
+    {
+      id: "linkedin",
+      label: "LinkedIn",
+      subtitle: "Terhubung secara profesional",
+      url: "https://www.linkedin.com/in/jason-christov-kesuma-a2a19a36b/",
+      icon: "Linkedin",
+    },
+    {
+      id: "github",
+      label: "GitHub",
+      subtitle: "Lihat repositori & kode sumber",
+      url: "https://github.com/JasonCK897",
+      icon: "Github",
+    },
+    {
+      id: "instagram",
+      label: "Instagram",
+      subtitle: "Aktivitas & dokumentasi sosial",
+      url: "https://www.instagram.com/j._chrisk/",
+      icon: "Instagram",
+    }
+  ],
   formspreeEndpoint: "https://formspree.io/f/xpwzgkvo"
 };

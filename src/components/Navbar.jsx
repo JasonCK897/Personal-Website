@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { Sun, Moon, Menu, X } from 'lucide-react';
+import { Sun, Moon, Menu, X, Terminal } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -26,19 +26,23 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-[#1B2A4A] text-white transition-all duration-300 ${
-      scrolled ? 'shadow-lg border-b border-[#1B3B6F]' : 'border-b border-transparent'
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-slate-950/80 dark:bg-cyber-bg/90 backdrop-blur-md shadow-lg border-b border-slate-800 dark:border-cyber-border' 
+        : 'bg-transparent border-b border-transparent'
     }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           
-          {/* Brand / Name: Full Name Required */}
+          {/* Brand */}
           <a 
             href="#home" 
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#8FB8E0] rounded-md py-1 px-1.5"
+            className="flex items-center gap-2.5 group focus:outline-none"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-[#8FB8E0] group-hover:scale-125 transition-transform"></span>
-            <span className="font-space text-lg sm:text-xl font-bold tracking-tight text-[#F7F4EE] group-hover:text-[#8FB8E0] transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+              <Terminal className="w-4 h-4" />
+            </div>
+            <span className="font-space text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-cyan-500 transition-colors">
               Jason Christov Kesuma
             </span>
           </a>
@@ -49,20 +53,20 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="px-3 py-2 rounded-md text-sm font-medium text-[#B9C4D9] hover:text-[#F7F4EE] hover:bg-[#1B3B6F]/40 transition-colors focus:outline-none focus:ring-1 focus:ring-[#8FB8E0]"
+                className="px-3 py-1.5 rounded-lg text-xs font-space font-medium text-slate-600 dark:text-cyber-textMuted hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-cyber-card transition-colors"
               >
                 {link.name}
               </a>
             ))}
 
-            {/* Dark/Light Mode Toggle */}
+            {/* Dark/Light Toggle */}
             <button
               onClick={toggleTheme}
               aria-label={isDark ? "Beralih ke mode terang" : "Beralih ke mode gelap"}
-              className="ml-3 p-2 rounded-lg text-[#8FB8E0] hover:text-white hover:bg-[#1B3B6F] transition-colors focus:outline-none focus:ring-2 focus:ring-[#8FB8E0]"
+              className="ml-2 p-2 rounded-lg text-slate-600 dark:text-cyber-sky hover:text-cyan-500 hover:bg-slate-100 dark:hover:bg-cyber-card transition-colors"
               title={isDark ? "Mode Terang" : "Mode Gelap"}
             >
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
           </nav>
 
@@ -71,14 +75,14 @@ export default function Navbar() {
             <button
               onClick={toggleTheme}
               aria-label={isDark ? "Beralih ke mode terang" : "Beralih ke mode gelap"}
-              className="p-2 rounded-lg text-[#8FB8E0] hover:text-white hover:bg-[#1B3B6F] transition-colors"
+              className="p-2 rounded-lg text-slate-600 dark:text-cyber-sky"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
-              className="p-2 rounded-lg text-[#F7F4EE] hover:text-[#8FB8E0] hover:bg-[#1B3B6F] transition-colors"
+              className="p-2 rounded-lg text-slate-900 dark:text-white"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -86,15 +90,15 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#15223C] border-b border-[#1B3B6F] px-4 pt-2 pb-6 space-y-1 animate-fadeIn">
+        <div className="md:hidden bg-white/95 dark:bg-cyber-surface/95 backdrop-blur-lg border-b border-slate-200 dark:border-cyber-border px-4 pt-2 pb-6 space-y-1">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2.5 rounded-md text-base font-medium text-[#B9C4D9] hover:text-[#F7F4EE] hover:bg-[#1B3B6F] transition-colors"
+              className="block px-3 py-2.5 rounded-lg text-sm font-space font-medium text-slate-700 dark:text-cyber-textMuted hover:text-cyan-500 hover:bg-slate-100 dark:hover:bg-cyber-card transition-colors"
             >
               {link.name}
             </a>
