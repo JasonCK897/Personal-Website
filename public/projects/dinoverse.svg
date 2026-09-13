@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgAR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A4A" />
+      <stop offset="100%" stop-color="#1B3B6F" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="340" fill="url(#bgAR)" />
+
+  <!-- AR Grid on floor (Isometric perspective) -->
+  <g stroke="#8FB8E0" stroke-opacity="0.25" stroke-width="1.5">
+    <ellipse cx="300" cy="240" rx="180" ry="60" fill="none" />
+    <ellipse cx="300" cy="240" rx="120" ry="40" fill="none" />
+    <line x1="120" y1="240" x2="480" y2="240" />
+    <line x1="300" y1="180" x2="300" y2="300" />
+    <line x1="180" y1="200" x2="420" y2="280" />
+    <line x1="180" y1="280" x2="420" y2="200" />
+  </g>
+
+  <!-- AR Marker Target (Center) -->
+  <rect x="260" y="225" width="80" height="30" rx="4" fill="#0F172A" stroke="#8FB8E0" stroke-width="2" />
+  <text x="300" y="244" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="9" fill="#8FB8E0" text-anchor="middle">AR MARKER</text>
+
+  <!-- Hologram Projection Beam -->
+  <polygon points="260,225 340,225 380,100 220,100" fill="#8FB8E0" fill-opacity="0.08" />
+
+  <!-- 3D Low-Poly Dinosaur Silhouette in Hologram -->
+  <g fill="none" stroke="#8FB8E0" stroke-width="1.5">
+    <!-- Body polygon wireframe -->
+    <polygon points="270,120 330,110 370,140 330,170 260,165 240,140" fill="#1B3B6F" fill-opacity="0.5" />
+    <!-- Neck & Head -->
+    <polygon points="330,110 380,80 400,90 380,115 350,125" fill="#1B3B6F" fill-opacity="0.6" />
+    <!-- Tail -->
+    <polygon points="240,140 180,130 220,160 260,165" fill="#1B3B6F" fill-opacity="0.4" />
+    <!-- Legs -->
+    <line x1="280" y1="165" x2="275" y2="225" />
+    <line x1="320" y1="170" x2="325" y2="225" />
+    <!-- Wireframe internal lines -->
+    <line x1="270" y1="120" x2="330" y2="170" stroke-dasharray="3 3" />
+    <line x1="330" y1="110" x2="260" y2="165" stroke-dasharray="3 3" />
+  </g>
+
+  <!-- AR Scanning HUD Elements -->
+  <g stroke="#8FB8E0" stroke-width="1.5">
+    <!-- Top Left Corner -->
+    <path d="M 60 70 H 40 V 90" fill="none" />
+    <!-- Top Right Corner -->
+    <path d="M 540 70 H 560 V 90" fill="none" />
+    <!-- Bottom Left Corner -->
+    <path d="M 60 290 H 40 V 270" fill="none" />
+    <!-- Bottom Right Corner -->
+    <path d="M 540 290 H 560 V 270" fill="none" />
+  </g>
+
+  <rect x="50" y="45" width="160" height="24" rx="4" fill="#0F172A" fill-opacity="0.7" />
+  <text x="60" y="61" font-family="'Space Grotesk', sans-serif" font-weight="600" font-size="11" fill="#F7F4EE">UNITY AR 3D ENGINE</text>
+  <text x="475" y="61" font-family="'Space Grotesk', sans-serif" font-weight="600" font-size="11" fill="#8FB8E0">FPS: 60 | TRACKING OK</text>
+</svg>

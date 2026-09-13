@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Double Trail-Orbit Animations for Hero Avatar */
+@keyframes orbit-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-counter-clockwise {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Outer Orbit Ring: Primary Navy Blue (#1B3B6F) Trail */
+.orbit-ring-outer {
+  position: absolute;
+  inset: -14px;
+  border-radius: 9999px;
+  background: conic-gradient(from 0deg, transparent 0deg, #1B3B6F 280deg, #8FB8E0 360deg);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
+  animation: orbit-clockwise 5.2s linear infinite;
+  pointer-events: none;
+}
+
+/* Inner Orbit Ring: Secondary Light Blue (#8FB8E0) Trail */
+.orbit-ring-inner {
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: conic-gradient(from 180deg, transparent 0deg, #8FB8E0 260deg, #FFFFFF 360deg);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2.5px), #000 calc(100% - 2.5px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2.5px), #000 calc(100% - 2.5px));
+  animation: orbit-counter-clockwise 4s linear infinite;
+  pointer-events: none;
+}
+
+/* Dark mode adjustments for orbit rings */
+.dark .orbit-ring-outer {
+  background: conic-gradient(from 0deg, transparent 0deg, #1B3B6F 240deg, #8FB8E0 360deg);
+  filter: drop-shadow(0 0 6px rgba(143, 184, 224, 0.4));
+}
+
+.dark .orbit-ring-inner {
+  background: conic-gradient(from 180deg, transparent 0deg, #8FB8E0 240deg, #E2E8F0 360deg);
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+}
+
+/* Disable animation if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring-outer,
+  .orbit-ring-inner {
+    animation: none;
+  }
+}
+
+/* Consistent Section Heading Style (Requirement #4) */
+.section-title {
+  @apply font-space font-medium text-2xl md:text-3xl text-navy-dark dark:text-cream tracking-tight;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F4EE;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B3B6F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8FB8E0;
+}
