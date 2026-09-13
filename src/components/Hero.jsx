@@ -117,7 +117,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="pt-28 pb-12 sm:pt-36 sm:pb-16 relative">
+    <section id="home" className="pt-24 pb-2 sm:pt-28 sm:pb-3 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Contrasting Hero Container Box */}

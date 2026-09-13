@@ -4,14 +4,18 @@ import { BookOpen, FileCheck, Clock, ExternalLink } from 'lucide-react';
 
 export default function Publications() {
   return (
-    <section id="research" className="py-12 sm:py-16">
+    <section id="research" className="py-2 sm:py-3">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Contrasting Section Box with subtle Indigo accent */}
-        <div className="section-box p-8 sm:p-12 lg:p-14">
+        <div className="section-box p-8 sm:p-12 lg:p-14 relative overflow-hidden">
+          {/* Ambient Glow */}
+          <div className="absolute -top-16 -right-16 w-72 h-72 bg-purple-500/10 dark:bg-sky-500/15 rounded-full blur-3xl ambient-glow pointer-events-none"></div>
+          <div className="absolute -bottom-16 -left-16 w-72 h-72 bg-blue-500/10 dark:bg-indigo-600/15 rounded-full blur-3xl animate-float-reverse pointer-events-none"></div>
+          <div className="absolute inset-0 canvas-bg-mesh opacity-25 pointer-events-none"></div>
           
           {/* Header */}
-          <div className="mb-10">
+          <div className="mb-10 relative z-10">
             <div className="text-xs font-mono font-bold text-brand-blue dark:text-sky-400 uppercase tracking-widest mb-1.5 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-blue dark:bg-sky-400"></span>
               <span>// 05. ACADEMIC INQUIRY</span>
@@ -24,7 +28,7 @@ export default function Publications() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
             {publicationsData.map((pub) => (
               <div
                 key={pub.id}

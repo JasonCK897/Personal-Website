@@ -8,14 +8,18 @@ export default function Skills() {
   const [activeCat, setActiveCat] = useState(0);
 
   return (
-    <section id="skills" className="py-12 sm:py-16">
+    <section id="skills" className="py-2 sm:py-3">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Contrasting Section Box */}
-        <div className="section-box p-8 sm:p-12 lg:p-14">
+        <div className="section-box p-8 sm:p-12 lg:p-14 relative overflow-hidden">
+          {/* Ambient Background Glow */}
+          <div className="absolute top-1/3 -right-20 w-80 h-80 bg-cyan-400/10 dark:bg-sky-500/15 rounded-full blur-3xl ambient-glow pointer-events-none"></div>
+          <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-brand-blue/10 dark:bg-indigo-600/15 rounded-full blur-3xl animate-float-reverse pointer-events-none"></div>
+          <div className="absolute inset-0 canvas-bg-mesh opacity-25 pointer-events-none"></div>
           
           {/* Header */}
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 relative z-10">
             <div>
               <div className="text-xs font-mono font-bold text-brand-blue dark:text-sky-400 uppercase tracking-widest mb-1.5 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-blue dark:bg-sky-400"></span>
@@ -45,7 +49,7 @@ export default function Skills() {
           </div>
 
           {/* All Categories Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
             {skillsData.categories.map((cat, idx) => {
               const Icon = categoryIcons[idx] || Terminal;
               const isSelected = activeCat === idx;

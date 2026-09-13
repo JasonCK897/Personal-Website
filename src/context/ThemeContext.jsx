@@ -4,12 +4,12 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(() => {
+    // Cek localStorage, jika belum ada atau bernilai light/lainnya, default ke false (LIGHT MODE)
     const saved = localStorage.getItem('jck-theme');
-    if (saved !== null) {
-      return saved === 'dark';
+    if (saved === 'dark') {
+      return true;
     }
-    // Default to false (Warm cream canvas with contrasting box cards)
-    return false;
+    return false; // Default: LIGHT MODE (Warm Cream Canvas)
   });
 
   useEffect(() => {

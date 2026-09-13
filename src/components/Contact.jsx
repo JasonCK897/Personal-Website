@@ -74,14 +74,18 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-12 sm:py-16">
+    <section id="contact" className="py-2 sm:py-3">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Contrasting Section Box */}
-        <div className="section-box p-8 sm:p-12 lg:p-14">
+        <div className="section-box p-8 sm:p-12 lg:p-14 relative overflow-hidden">
+          {/* Ambient Background Glow */}
+          <div className="absolute -top-24 -right-24 w-80 h-80 bg-sky-400/10 dark:bg-sky-500/15 rounded-full blur-3xl ambient-glow pointer-events-none"></div>
+          <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-brand-blue/10 dark:bg-cyan-600/15 rounded-full blur-3xl animate-float-slow pointer-events-none"></div>
+          <div className="absolute inset-0 canvas-bg-mesh opacity-25 pointer-events-none"></div>
           
           {/* Header */}
-          <div className="mb-10">
+          <div className="mb-10 relative z-10">
             <div className="text-xs font-mono font-bold text-brand-blue dark:text-sky-400 uppercase tracking-widest mb-1.5 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-blue dark:bg-sky-400"></span>
               <span>// 06. CONNECT</span>
@@ -91,7 +95,7 @@ export default function Contact() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch relative z-10">
             
             {/* Box 1: Direct Clickable Channels (Without raw URLs) */}
             <div className="bg-slate-50/80 dark:bg-slate-900/60 border border-slate-200/90 dark:border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
