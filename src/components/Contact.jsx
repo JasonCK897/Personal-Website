@@ -44,7 +44,7 @@ export default function Contact() {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          _subject: `Pesan Portofolio Baru dari ${formData.name}`,
+          _subject: `New Portfolio Message from ${formData.name}`,
         })
       });
 
@@ -61,15 +61,15 @@ export default function Contact() {
 
   const fallbackMailto = () => {
     const mailtoUrl = `mailto:${contactData.email}?subject=${encodeURIComponent(
-      `Pesan dari ${formData.name}`
+      `Message from ${formData.name}`
     )}&body=${encodeURIComponent(
-      `Nama: ${formData.name}\nEmail: ${formData.email}\n\nPesan:\n${formData.message}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )}`;
     window.location.href = mailtoUrl;
     setStatus({ 
       submitting: false, 
       submitted: true, 
-      error: 'Form dialihkan ke aplikasi email default Anda.' 
+      error: 'Redirected to your default email client.' 
     });
   };
 
@@ -80,28 +80,28 @@ export default function Contact() {
         {/* Section Header */}
         <div className="mb-10">
           <div className="text-xs font-mono font-semibold text-cyan-500 uppercase tracking-widest mb-1">
-            // 02. CONNECT
+            // 05. CONNECT
           </div>
           <h2 className="section-title">
             Get in Touch
           </h2>
         </div>
 
-        {/* Dua Box Berdampingan */}
+        {/* Two Columns Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
-          {/* Box 1: Info Kontak (Direct Links Langsung Tanpa Menunjukkan URL Mentah) */}
+          {/* Box 1: Contact Channels (Direct Clickable Links without Exposing Raw URLs) */}
           <div className="bg-white dark:bg-cyber-card border border-slate-200 dark:border-cyber-border rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
               <h3 className="font-space font-semibold text-xl text-slate-900 dark:text-white tracking-normal mb-2 pb-3 border-b border-slate-100 dark:border-cyber-border">
-                Kanal Kontak
+                Direct Channels
               </h3>
               
               <p className="text-xs sm:text-sm text-slate-600 dark:text-cyber-textMuted leading-relaxed mb-6">
-                Silakan hubungi atau terhubung langsung melalui kanal resmi berikut. Klik salah satu kartu untuk langsung membuka platform terkait:
+                Feel free to connect directly through any of these platforms. Click any card to open:
               </p>
 
-              {/* Direct Links Tanpa Menunjukkan URL Mentah */}
+              {/* Direct Links */}
               <div className="space-y-3">
                 {contactData.channels.map((channel) => {
                   const Icon = iconComponents[channel.icon] || Mail;
@@ -135,26 +135,26 @@ export default function Contact() {
             </div>
 
             <div className="mt-6 pt-4 border-t border-slate-100 dark:border-cyber-border text-xs text-slate-500 dark:text-slate-400 flex items-center justify-between font-mono">
-              <span>Malang, Jawa Timur</span>
+              <span>Malang, East Java, Indonesia</span>
               <span>UTC+7 (WIB)</span>
             </div>
           </div>
 
-          {/* Box 2: Kirim Pesan */}
+          {/* Box 2: Send Message Form */}
           <div className="bg-white dark:bg-cyber-card border border-slate-200 dark:border-cyber-border rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
               <h3 className="font-space font-semibold text-xl text-slate-900 dark:text-white tracking-normal mb-2 pb-3 border-b border-slate-100 dark:border-cyber-border">
-                Kirim Pesan
+                Send a Message
               </h3>
               
               <p className="text-xs sm:text-sm text-slate-600 dark:text-cyber-textMuted leading-relaxed mb-6">
-                Kirimkan pesan instan untuk tawaran riset, diskusi mikrokontroler, atau proyek teknologi:
+                Have a project proposal, research opportunity, or technical inquiry? Send a message directly:
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1 font-mono">
-                    Nama
+                    Your Name
                   </label>
                   <input
                     type="text"
@@ -163,14 +163,14 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Nama Anda"
+                    placeholder="Enter your name"
                     className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-cyber-border bg-slate-50 dark:bg-cyber-surface text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1 font-mono">
-                    Email
+                    Email Address
                   </label>
                   <input
                     type="email"
@@ -179,14 +179,14 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="email@example.com"
+                    placeholder="name@example.com"
                     className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-cyber-border bg-slate-50 dark:bg-cyber-surface text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1 font-mono">
-                    Pesan
+                    Message
                   </label>
                   <textarea
                     id="message"
@@ -195,7 +195,7 @@ export default function Contact() {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tuliskan pesan Anda di sini..."
+                    placeholder="Type your message, questions, or collaboration details here..."
                     className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-cyber-border bg-slate-50 dark:bg-cyber-surface text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all resize-none"
                   ></textarea>
                 </div>
@@ -203,7 +203,7 @@ export default function Contact() {
                 {status.submitted && (
                   <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
-                    <span>Pesan berhasil terkirim! Terima kasih.</span>
+                    <span>Message sent successfully! I will get back to you shortly.</span>
                   </div>
                 )}
 
@@ -220,7 +220,7 @@ export default function Contact() {
                   className="w-full py-3 px-6 rounded-xl font-space text-sm font-semibold bg-cyan-500 text-slate-950 hover:bg-cyan-400 shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
                 >
                   <Send className="w-4 h-4" />
-                  {status.submitting ? 'Mengirim pesan...' : 'Kirim Sekarang'}
+                  {status.submitting ? 'Sending Message...' : 'Send Message'}
                 </button>
               </form>
             </div>

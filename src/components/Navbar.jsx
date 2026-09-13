@@ -8,7 +8,6 @@ const navLinks = [
   { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Blog', href: '#blog' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -62,9 +61,9 @@ export default function Navbar() {
             {/* Dark/Light Toggle */}
             <button
               onClick={toggleTheme}
-              aria-label={isDark ? "Beralih ke mode terang" : "Beralih ke mode gelap"}
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
               className="ml-2 p-2 rounded-lg text-slate-600 dark:text-cyber-sky hover:text-cyan-500 hover:bg-slate-100 dark:hover:bg-cyber-card transition-colors"
-              title={isDark ? "Mode Terang" : "Mode Gelap"}
+              title={isDark ? "Light Mode" : "Dark Mode"}
             >
               {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
@@ -74,14 +73,14 @@ export default function Navbar() {
           <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={toggleTheme}
-              aria-label={isDark ? "Beralih ke mode terang" : "Beralih ke mode gelap"}
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
               className="p-2 rounded-lg text-slate-600 dark:text-cyber-sky"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               className="p-2 rounded-lg text-slate-900 dark:text-white"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

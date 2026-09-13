@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { projectsData } from '../data/portfolio';
-import { ExternalLink, Github, Lock, ArrowUpRight } from 'lucide-react';
+import { Lock, ArrowUpRight } from 'lucide-react';
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filterOptions = [
-    { id: 'all', label: 'Semua Proyek' },
+    { id: 'all', label: 'All Projects' },
     { id: 'firmware', label: 'Firmware' },
     { id: 'web3', label: 'Sui Blockchain' },
     { id: 'web', label: 'Web Systems' },
@@ -20,11 +20,11 @@ export default function Projects() {
     <section id="projects" className="py-20 bg-slate-900/30 dark:bg-cyber-surface/40 transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header with technical badge */}
+        {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div>
             <div className="text-xs font-mono font-semibold text-cyan-500 uppercase tracking-widest mb-1">
-              // 01. SHOWCASE
+              // 04. SHOWCASE
             </div>
             <h2 className="section-title">
               Featured Projects
@@ -49,7 +49,7 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Project Cards Grid: Visual-First & Concise (Anti Wall-of-Text) */}
+        {/* Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <div
@@ -81,7 +81,7 @@ export default function Projects() {
                 )}
               </div>
 
-              {/* Card Body: Punchy & Concise */}
+              {/* Card Body */}
               <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
                   <div className="text-[11px] font-mono text-cyan-600 dark:text-cyan-400 font-medium mb-1">
@@ -92,12 +92,10 @@ export default function Projects() {
                     {project.title}
                   </h3>
 
-                  {/* 1 Kalimat Padat */}
                   <p className="text-xs text-slate-600 dark:text-cyber-textMuted leading-relaxed mb-4">
                     {project.description}
                   </p>
 
-                  {/* Highlight Metric Badge */}
                   <div className="text-[11px] font-mono text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-cyber-surface px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-cyber-border/70 mb-4">
                     {project.metrics}
                   </div>

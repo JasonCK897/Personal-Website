@@ -7,13 +7,13 @@ export default function About() {
     <section id="about" className="py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Technical section heading */}
+        {/* Section Header */}
         <div className="mb-10">
           <div className="text-xs font-mono font-semibold text-cyan-500 uppercase tracking-widest mb-1">
-            // BACKGROUND
+            // 01. BACKGROUND
           </div>
           <h2 className="section-title">
-            About &amp; Pendidikan
+            About &amp; Education
           </h2>
         </div>
 
@@ -41,7 +41,7 @@ export default function About() {
                 {/* GPA Badge */}
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold">
                   <Award className="w-3.5 h-3.5" />
-                  <span>IPK: {educationData.gpa}</span>
+                  <span>GPA: {educationData.gpa}</span>
                 </div>
               </div>
 
@@ -67,7 +67,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Core Focus & Approach Card */}
+          {/* Core Technical Focus Card */}
           <div className="lg:col-span-5 bg-white dark:bg-cyber-card border border-slate-200 dark:border-cyber-border rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 mb-4">
@@ -75,26 +75,26 @@ export default function About() {
                   <Cpu className="w-6 h-6" />
                 </div>
                 <h3 className="font-space font-bold text-lg text-slate-900 dark:text-white">
-                  Fokus &amp; Rekayasa
+                  Technical Focus
                 </h3>
               </div>
 
               <p className="text-xs sm:text-sm text-slate-600 dark:text-cyber-textMuted leading-relaxed mb-4">
-                Mengeksplorasi batas antara perangkat lunak tingkat rendah (*firmware*) dan arsitektur sirkuit perangkat keras.
+                Exploring the boundary between bare-metal firmware software and physical hardware circuit architectures.
               </p>
 
               <div className="space-y-2.5 text-xs">
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-cyber-surface border border-slate-200 dark:border-cyber-border">
                   <strong className="text-cyan-600 dark:text-cyan-400 block mb-0.5 font-mono">STM32 &bull; ESP32 MCU</strong>
-                  <span className="text-slate-600 dark:text-cyber-textMuted">Pemrograman mikrokontroler, telemetri nirkabel, dan kalibrasi sinyal multi-sensor.</span>
+                  <span className="text-slate-600 dark:text-cyber-textMuted">Bare-metal C/C++, FreeRTOS multitasking, wireless telemetry, and sensor calibration.</span>
                 </div>
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-cyber-surface border border-slate-200 dark:border-cyber-border">
-                  <strong className="text-cyan-600 dark:text-cyan-400 block mb-0.5 font-mono">Sinyal &bull; Noise Immunity</strong>
-                  <span className="text-slate-600 dark:text-cyber-textMuted">Digital signal filtering (EMA &amp; Median Filter) untuk eliminasi interferensi elektromagnetik.</span>
+                  <strong className="text-cyan-600 dark:text-cyan-400 block mb-0.5 font-mono">Signal &bull; Noise Immunity</strong>
+                  <span className="text-slate-600 dark:text-cyber-textMuted">Digital signal filtering (EMA &amp; Median Filter) to eliminate capacitive electromagnetic interference.</span>
                 </div>
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-cyber-surface border border-slate-200 dark:border-cyber-border">
                   <strong className="text-cyan-600 dark:text-cyan-400 block mb-0.5 font-mono">Sui Move Smart Contracts</strong>
-                  <span className="text-slate-600 dark:text-cyber-textMuted">Penerapan model objek Move untuk arsitektur transaksi desentralisasi on-chain.</span>
+                  <span className="text-slate-600 dark:text-cyber-textMuted">Leveraging Sui's object-centric paradigm for high-throughput, secure decentralized logic.</span>
                 </div>
               </div>
             </div>

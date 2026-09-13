@@ -1,6 +1,6 @@
 import React from 'react';
 import { experienceData } from '../data/portfolio';
-import { Calendar, MapPin, Briefcase } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 export default function Experience() {
   return (
@@ -10,10 +10,10 @@ export default function Experience() {
         {/* Section Header */}
         <div className="mb-12">
           <div className="text-xs font-mono font-semibold text-cyan-500 uppercase tracking-widest mb-1">
-            // JOURNEY
+            // 03. TRACK RECORD
           </div>
           <h2 className="section-title">
-            Pengalaman
+            Experience &amp; Leadership
           </h2>
         </div>
 

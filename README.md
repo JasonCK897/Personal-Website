@@ -1,6 +1,6 @@
-# Website Portfolio Pribadi - Jason Christov Kesuma
+# Jason Christov Kesuma - Personal Portfolio & Engineering Showcase
 
-Single Page Application (SPA) website portfolio modern dan performan untuk **Jason Christov Kesuma**, Mahasiswa S1 Teknik Informatika di Universitas Ma Chung dengan fokus keahlian pada *Embedded Systems*, *Firmware*, dan *IoT*.
+A modern, high-performance Single Page Application (SPA) portfolio website for **Jason Christov Kesuma**, an undergraduate Informatics Engineering student at Universitas Ma Chung specializing in **Embedded Systems**, **Firmware Engineering**, and **Web3 Smart Contracts**.
 
 ---
 
@@ -9,81 +9,56 @@ Single Page Application (SPA) website portfolio modern dan performan untuk **Jas
 - **Framework**: [React 18](https://react.dev/) + [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Icons**: [React Icons](https://react-icons.github.io/react-icons/) (`react-icons/si`, `react-icons/fa6`, `react-icons/tb`) & [Lucide React](https://lucide.dev/)
-- **Forms**: Direct API Formspree / EmailJS / Mailto fallback
-- **Typography**: Space Grotesk (Headline) & Inter (Body) via Google Fonts
+- **Forms**: Formspree API with direct mailto fallback
+- **Typography**: Space Grotesk & Inter via Google Fonts
 
 ---
 
-## Fitur Utama
+## Key Features
 
-1. **Double Trail-Orbit Animation**:
-   - Animasi orbit hero 2 cincin bertingkat dengan efek gradasi memudar (*conic-gradient* + *radial mask*).
-   - Ring 1 (Luar): Putaran searah jarum jam (#1B3B6F).
-   - Ring 2 (Dalam): Putaran berlawanan arah jarum jam (#8FB8E0).
-   - Mendukung aksesibilitas `prefers-reduced-motion`.
-2. **Design Tokens Terstandarisasi**:
-   - Background Body: `#F7F4EE` (Cream)
-   - Frame (Navbar & Footer): `#1B2A4A` (Navy tua)
-   - Aksen Utama: `#1B3B6F`
-   - Aksen Sekunder: `#8FB8E0`
-   - Section Contact menggunakan latar `#EFEAE0` (terpisah tegas dari footer navy).
-3. **Pemisahan Data & Logika**:
-   - Seluruh konten dan informasi profil tersimpan di [`src/data/portfolio.js`](src/data/portfolio.js). Anda dapat memperbarui informasi tanpa perlu mengubah kode komponen.
-4. **Dark / Light Mode**:
-   - Dilengkapi toggle mode gelap/terang yang tersimpan di `localStorage` dan otomatis mendeteksi preferensi sistem.
-5. **Tombol "Lihat CV"**:
-   - Langsung membuka file CV PDF asli di tab baru (`/cv-jason-christov-kesuma.pdf`).
+1. **Distinct Framed Hero Section**:
+   - Elevated container box with ambient background lighting and double trail-orbit avatar animation (`conic-gradient` + `radial-gradient` mask).
+   - Instant CTA buttons: **"View CV"** (opens the original PDF directly) and **"Contact Me"**.
+2. **Featured Projects (Visual-First & Concise)**:
+   - **Project Shasta**: Touch Controller Noise Immunity Firmware Suite (STM32 DAC + ESP32 Wireless Relay).
+   - **Sui Blockchain dApp**: Decentralized on-chain library management system using Move smart contracts and React.
+   - **AiDiTech**: Research center web portal and admin CMS for Universitas Ma Chung.
+3. **Direct Contact Channels**:
+   - Clean, direct clickable cards opening Email, LinkedIn, GitHub, and Instagram without displaying messy raw URLs.
+4. **Dark / Light Theme Toggle**:
+   - Defaults to an ultra-modern Cyber Obsidian theme, with a crisp clean light mode alternative.
+5. **Decoupled Architecture**:
+   - Content and information are cleanly maintained inside [`src/data/portfolio.js`](src/data/portfolio.js).
 
 ---
 
-## Menjalankan Project Secara Lokal
+## Getting Started Locally
 
-Pastikan Anda telah menginstal [Node.js](https://nodejs.org/) (versi 18 ke atas disarankan).
+Ensure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
 
-1. Buka terminal di folder `Website`:
+1. Clone or navigate to the project directory:
    ```bash
    cd D:\PersonaWebsite\Website
    ```
 
-2. Jalankan server pengembang (development server):
+2. Run the development server:
    ```bash
    npm run dev
    ```
 
-3. Buka browser di [http://localhost:3000](http://localhost:3000).
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## Build untuk Produksi
+## Production Build
 
-Untuk menghasilkan file statis siap produksi:
+To generate the optimized static build:
 ```bash
 npm run build
 ```
-File hasil build akan berada di folder `dist/`.
+The compiled assets will be output to the `dist/` directory.
 
-Untuk melihat preview hasil build produksi secara lokal:
+To preview the production build locally:
 ```bash
 npm run preview
 ```
-
----
-
-## Panduan Penyesuaian (Customization)
-
-| Bagian | Lokasi File | Keterangan |
-|---|---|---|
-| **Data Profil & Teks** | `src/data/portfolio.js` | Edit nama, bio, data pendidikan, pengalaman, proyek, dan kontak |
-| **Foto Profil Asli** | `public/avatar.png` | Simpan foto profil Anda dengan format PNG/WebP berukuran persegi |
-| **Tautan GitHub & Instagram** | `src/data/portfolio.js` (`social`) | Masukkan URL profil GitHub dan Instagram |
-| **Screenshot Proyek** | `public/projects/` | Tambahkan screenshot proyek Aroguard, AiDiTech, dan DinoVerse |
-| **Formulir Kontak (Formspree)** | `src/data/portfolio.js` (`formspreeEndpoint`) | Daftarkan form di [Formspree](https://formspree.io/) dan masukkan endpoint ID Anda |
-| **File CV PDF Terbaru** | `public/cv-jason-christov-kesuma.pdf` | Ganti file PDF ini jika ada pembaruan CV |
-
----
-
-## Deployment ke Vercel / Netlify
-
-Website ini 100% statis (SPA) dan siap di-deploy langsung:
-- **Vercel**: Hubungkan repository GitHub, pilih direktori root `Website`, framework preset `Vite`.
-- **Netlify**: Build command `npm run build`, publish directory `dist`.

@@ -27,10 +27,10 @@ export default function Skills() {
         {/* Section Header */}
         <div className="mb-10">
           <div className="text-xs font-mono font-semibold text-cyan-500 uppercase tracking-widest mb-1">
-            // TOOLSET
+            // 02. TOOLSET
           </div>
           <h2 className="section-title">
-            Skills &amp; Keahlian
+            Skills &amp; Technologies
           </h2>
         </div>
 
@@ -43,7 +43,7 @@ export default function Skills() {
                 <Code2 className="w-5 h-5" />
               </div>
               <h3 className="font-space font-bold text-lg text-slate-900 dark:text-white">
-                Bahasa Pemrograman &amp; Lingkungan
+                Programming Languages &amp; Environments
               </h3>
             </div>
 
@@ -70,7 +70,7 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Soft Skills Column */}
+          {/* Soft Skills / Competencies Column */}
           <div className="lg:col-span-4 bg-white dark:bg-cyber-card border border-slate-200 dark:border-cyber-border rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2.5 mb-6">
@@ -78,7 +78,7 @@ export default function Skills() {
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <h3 className="font-space font-bold text-lg text-slate-900 dark:text-white">
-                  Soft Skills
+                  Core Competencies
                 </h3>
               </div>
 
@@ -98,7 +98,7 @@ export default function Skills() {
             </div>
 
             <div className="mt-6 pt-4 border-t border-slate-100 dark:border-cyber-border text-[11px] font-mono text-slate-500">
-              Analisis komputasi teliti &amp; kolaborasi adaptif.
+              Rigorous computational analysis &amp; adaptive execution.
             </div>
           </div>
 
