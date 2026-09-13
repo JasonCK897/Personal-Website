@@ -8,8 +8,8 @@ export const ThemeProvider = ({ children }) => {
     if (saved !== null) {
       return saved === 'dark';
     }
-    // Default to true (Dark mode) for premium cyber hardware engineering aesthetic
-    return true;
+    // Default to false (Warm cream canvas with contrasting box cards)
+    return false;
   });
 
   useEffect(() => {

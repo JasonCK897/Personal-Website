@@ -1,17 +1,25 @@
 /**
  * Portfolio Data - Jason Christov Kesuma
- * Professional English version focusing on Embedded Systems, Firmware, and Web3.
+ * Multi-disciplinary Informatics Engineering Portfolio:
+ * Full-Stack Web, Embedded Systems, Machine Learning & HMI, and Web3.
  */
 
 export const personalData = {
   name: "Jason Christov Kesuma",
-  role: "Informatics Engineering Student",
-  tagline: "Embedded Systems • Firmware Engineering • Web3",
-  bio: "Undergraduate Informatics Engineering student at Universitas Ma Chung (Malang, Indonesia). Focused on STM32 & ESP32 firmware engineering, signal noise immunity analysis, and decentralized smart contracts on the Sui ecosystem.",
+  role: "Informatics Engineering Student & Developer",
+  tagline: "Full-Stack Web • Embedded Systems • Intelligent Computing & HMI",
+  bio: "Undergraduate Informatics Engineering student at Universitas Ma Chung (Malang, Indonesia). Passionate about crafting modern web applications, low-level microcontroller systems, and assistive machine learning research at the Human-Machine Interaction (HMI) lab.",
   location: "Malang, Indonesia",
   avatar: "/avatar.svg",
   cvUrl: "/cv-jason-christov-kesuma.pdf",
   
+  domains: [
+    { name: "Web Engineering", count: "Full-Stack & Frontend", icon: "Globe" },
+    { name: "Embedded Systems", count: "STM32 & ESP32 IoT", icon: "Cpu" },
+    { name: "Machine Learning & HMI", count: "Assistive Tech & Research", icon: "Brain" },
+    { name: "Web3 & Smart Contracts", count: "Sui Move Ecosystem", icon: "Layers" },
+  ],
+
   social: {
     email: "mailto:jasonchristov@gmail.com",
     linkedin: "https://www.linkedin.com/in/jason-christov-kesuma-a2a19a36b/",
@@ -27,29 +35,30 @@ export const educationData = {
   period: "2023 - 2027 (Expected)",
   gpa: "3.49 / 4.00",
   highlights: [
-    "Core Focus: Computer Architecture, Low-level Systems Programming, and Algorithm Analysis.",
-    "Independent Research: Microcontroller noise immunity testing & wireless IoT telemetry.",
-    "Active contributor at the Human-Machine Interaction (HMI) Research Laboratory."
+    "Core Coursework: Web Programming, Data Structures, Computer Architecture, Low-Level Systems, and Machine Learning.",
+    "Academic Research: Active member of the Human-Machine Interaction (HMI) Study Center.",
+    "Leadership: Student association event coordinator and inter-campus academic exchange lead."
   ]
 };
 
 export const skillsData = {
-  programming: [
-    { name: "C/C++", level: "Advanced", icon: "SiCplusplus", category: "Embedded" },
-    { name: "Python", level: "Intermediate", icon: "SiPython", category: "Data / Tools" },
-    { name: "Java", level: "Intermediate", icon: "FaJava", category: "OOP" },
-    { name: "C#", level: "Intermediate", icon: "TbBrandCSharp", category: "Systems" },
-    { name: "HTML", level: "Advanced", icon: "FaHtml5", category: "Web Interface" },
-    { name: "CSS", level: "Intermediate", icon: "FaCss3Alt", category: "Styling" },
-    { name: "JavaScript", level: "Intermediate", icon: "SiJavascript", category: "Web / dApp" },
-  ],
-  softSkills: [
-    "Project Management",
-    "Problem Solving",
-    "Analytical Precision",
-    "Cross-functional Teamwork",
-    "Autonomous Learning",
-    "Adaptive Engineering"
+  categories: [
+    {
+      title: "Web & Software Engineering",
+      skills: ["HTML5", "CSS3 / Tailwind", "JavaScript (ES6+)", "React.js", "PHP", "MySQL", "REST APIs"]
+    },
+    {
+      title: "Systems & Embedded Programming",
+      skills: ["C/C++", "STM32 Microcontrollers", "ESP32", "IoT Telemetry", "C# / .NET", "FreeRTOS basics"]
+    },
+    {
+      title: "Machine Learning & Research Tools",
+      skills: ["Python", "Data Analysis", "Sensor Processing", "HMI Interfaces", "Git / GitHub", "PHPMyAdmin"]
+    },
+    {
+      title: "Core Methodologies",
+      skills: ["Problem Solving", "System Debugging", "Project Management", "Technical Documentation", "Team Leadership"]
+    }
   ]
 };
 
@@ -60,7 +69,12 @@ export const experienceData = [
     organization: "Human-Machine Interaction (HMI) Study Center",
     location: "Malang, Indonesia",
     period: "Feb 2026 - Jul 2026",
-    description: "Conducted research on inclusive accessibility technology: Disability Mouse, Sign Language Glove, and sensor signal acquisition.",
+    tag: "Research & AI/HMI",
+    description: "Conducted inclusive technology research creating assistive devices for disabled users: Disability Mouse, Sign Language Glove, and voice/gesture signal acquisition.",
+    points: [
+      "Assisted in hardware sensor testing and signal acquisition algorithms for assistive interfaces.",
+      "Collaborated with faculty researchers on paper preparation and hardware-software integration."
+    ]
   },
   {
     id: "exp-2",
@@ -68,65 +82,108 @@ export const experienceData = [
     organization: "Informatics Student Association",
     location: "Surabaya, Indonesia",
     period: "Jun 2026",
-    description: "Led a 12-member delegation coordinating academic benchmark exchange with Universitas Surabaya, attended by 50 combined participants.",
+    tag: "Leadership & Management",
+    description: "Led a 12-member committee coordinating a major academic exchange with Universitas Surabaya, attended by 50 participants.",
+    points: [
+      "Directed end-to-end logistics, schedule synchronization, and bilateral technical workshops.",
+      "Facilitated tech discussions on university curricula and undergraduate research projects."
+    ]
   },
   {
     id: "exp-3",
-    role: "Organizing Committee - Ma Chung Festival 2025",
-    organization: "Universitas Ma Chung",
+    role: "Organizing Committee Member",
+    organization: "Ma Chung Festival 2025",
     location: "Malang, Indonesia",
     period: "Aug 2025 - Feb 2026",
-    description: "Managed technical field operations and inter-divisional logistics for the annual new student convocation festival.",
+    tag: "Event Operations",
+    description: "Managed technical field operations and coordination between faculties during the annual university convocation festival.",
+    points: [
+      "Coordinated with university administrators to ensure seamless operational execution."
+    ]
   }
 ];
 
-// 3 Featured Projects (Concise, Visual-First)
+// Diverse Projects: Web Programming, Embedded Systems, Machine Learning/HMI, and Web3
 export const projectsData = [
   {
+    id: "proj-aiditech",
+    title: "AiDiTech Research Portal & CMS",
+    category: "web",
+    badge: "Web Development",
+    role: "Web Developer",
+    period: "Apr 2026 - Jun 2026",
+    description: "Official web platform for Universitas Ma Chung's AI research lab. Features an indexed scientific journal repository, relational database architecture, and an admin content management system.",
+    tags: ["PHP", "MySQL", "JavaScript", "Responsive UI", "CMS"],
+    metrics: "Indexed Journal DB • Admin CMS • Responsive Design",
+    repoUrl: "https://github.com/JasonCK897",
+    demoUrl: "",
+    image: "/projects/aiditech.svg"
+  },
+  {
     id: "proj-firmware",
-    title: "Project Shasta: Touch Controller Firmware",
+    title: "Project Shasta: Noise Immunity Suite",
+    category: "embedded",
+    badge: "Embedded & Hardware",
     role: "Firmware Developer",
     period: "Sep 2026",
-    category: "firmware",
-    description: "Noise immunity testing suite for capacitive touch sensors powered by an STM32 DAC arbitrary waveform synthesizer and ESP32 wireless telemetry relay.",
-    tags: ["STM32", "ESP32", "Embedded C++", "DSP"],
-    metrics: "12-bit DAC • Noise Immunity • Wireless Telemetry",
-    demoUrl: "",
+    description: "Precision touch sensor noise immunity testing system combining an STM32 DAC arbitrary waveform synthesizer and ESP32 wireless telemetry relay.",
+    tags: ["STM32", "ESP32", "Embedded C++", "DSP Filtering"],
+    metrics: "12-bit DAC • Signal Filtering • Wireless Telemetry",
     repoUrl: "https://github.com/JasonCK897/ProjectShasta-Firmware",
-    isPrivate: true,
-    image: "/projects/firmware-shasta.svg"
+    demoUrl: "",
+    image: "/projects/firmware-shasta.svg",
+    isPrivate: true
+  },
+  {
+    id: "proj-hmi",
+    title: "HMI Assistive Interface & Sensor Suite",
+    category: "ml",
+    badge: "ML & Assistive Tech",
+    role: "Research Assistant",
+    period: "Feb 2026 - Jul 2026",
+    description: "Inclusive computing interface prototypes (Disability Mouse & Sign Language Glove) applying sensor processing and gesture recognition algorithms for motor-impaired individuals.",
+    tags: ["Python", "Machine Learning", "HMI", "Sensor Calibration"],
+    metrics: "Accessibility Tech • Realtime Recognition • HMI Research",
+    repoUrl: "https://github.com/JasonCK897",
+    demoUrl: "",
+    image: "/projects/aroguard.svg"
   },
   {
     id: "proj-sui",
-    title: "Sui Blockchain: Library dApp",
-    role: "Move & Web3 Developer",
-    period: "Nov 2025",
+    title: "Sui Blockchain: Decentralized Library",
     category: "web3",
-    description: "On-chain decentralized library management system leveraging Sui's object-centric Move smart contracts with React and Sui Wallet integration.",
+    badge: "Web3 & Blockchain",
+    role: "Smart Contract Developer",
+    period: "Nov 2025",
+    description: "On-chain decentralized library management system built with Sui Move's object-centric smart contract paradigm, paired with a reactive Web3 wallet frontend.",
     tags: ["Sui Move", "Blockchain", "React", "TypeScript"],
-    metrics: "Sui Testnet • Sub-second Finality • Web3 Wallet",
-    demoUrl: "https://github.com/JasonCK897/SuiProjekD3-Kel4",
+    metrics: "Move Object Model • Sub-Second Finality • Web3 Wallet",
     repoUrl: "https://github.com/JasonCK897/SuiProjekD3-Kel4",
-    isPrivate: false,
+    demoUrl: "https://github.com/JasonCK897/SuiProjekD3-Kel4",
     image: "/projects/sui-library.svg"
-  },
-  {
-    id: "proj-aiditech",
-    title: "AiDiTech: Research Portal & CMS",
-    role: "Web Developer",
-    period: "Apr 2026 - Jun 2026",
-    category: "web",
-    description: "Official research center web platform for Universitas Ma Chung featuring an indexed scientific publication repository and admin editorial dashboard.",
-    tags: ["PHP", "MySQL", "PHPMyAdmin", "CMS"],
-    metrics: "Ma Chung Research • Relational Database • Admin Dashboard",
-    demoUrl: "",
-    repoUrl: "https://github.com/JasonCK897",
-    isPrivate: false,
-    image: "/projects/aiditech.svg"
   }
 ];
 
-// Direct Contact Channels (Clean direct links without displaying raw URLs)
+// Academic Research & Publications (Documentation in progress)
+export const publicationsData = [
+  {
+    id: "pub-1",
+    title: "Human-Machine Interaction in Inclusive Assistive Computing",
+    venue: "Universitas Ma Chung HMI Research Study",
+    status: "Manuscript in Preparation",
+    year: "2026",
+    description: "Investigation into ergonomic sensor placement and gesture recognition filtering for motor-impaired interactive peripherals."
+  },
+  {
+    id: "pub-2",
+    title: "Noise Immunity Calibration in Capacitive Touch Sensing Interfaces",
+    venue: "Technical Research & Benchmark",
+    status: "Experimental Verification Completed",
+    year: "2026",
+    description: "Empirical study on moving-median vs. exponential filtering under variable high-frequency switching power noise."
+  }
+];
+
 export const contactData = {
   email: "jasonchristov@gmail.com",
   channels: [

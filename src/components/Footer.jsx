@@ -20,22 +20,24 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-950 dark:bg-cyber-bg text-slate-400 py-10 border-t border-slate-800 dark:border-cyber-border transition-colors duration-200">
+    <footer className="mt-16 pb-12 transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        {/* Contrasting Navy Anchor Box */}
+        <div className="section-box-navy p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
           
           {/* Copyright & Identity */}
           <div className="text-center md:text-left">
-            <div className="font-space font-semibold text-white text-base mb-0.5">
+            <div className="font-space font-bold text-white text-lg mb-1">
               Jason Christov Kesuma
             </div>
-            <p className="text-xs text-slate-500 font-mono">
-              &copy; {currentYear} &bull; Embedded Systems, Firmware &amp; Web3.
+            <p className="text-xs text-slate-400 font-mono">
+              &copy; {currentYear} &bull; Full-Stack Web, Embedded Systems &amp; Intelligent Computing.
             </p>
           </div>
 
-          {/* Social Channels (Direct Clickable Icons Tanpa URL Mentah) */}
-          <div className="flex items-center gap-2">
+          {/* Social Channels (Direct Clickable Icons without raw URLs) */}
+          <div className="flex items-center gap-2.5">
             {contactData.channels.map((ch) => {
               const Icon = iconMap[ch.icon] || Mail;
               return (
@@ -45,7 +47,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={ch.label}
-                  className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-cyan-500/50 text-slate-400 hover:text-cyan-400 hover:bg-slate-800 transition-all"
+                  className="p-2.5 rounded-xl bg-slate-800 border border-slate-700 hover:border-sky-400 text-slate-300 hover:text-sky-400 hover:bg-slate-700 transition-all duration-200"
                   title={ch.label}
                 >
                   <Icon className="w-4 h-4" />
@@ -58,14 +60,15 @@ export default function Footer() {
           <div>
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors group px-3 py-1.5 rounded-lg hover:bg-slate-900"
+              className="inline-flex items-center gap-2 text-xs font-mono font-semibold text-sky-400 hover:text-white transition-colors group px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700 hover:bg-slate-700"
             >
-              <span>TOP</span>
+              <span>BACK TO TOP</span>
               <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>
           </div>
 
         </div>
+
       </div>
     </footer>
   );

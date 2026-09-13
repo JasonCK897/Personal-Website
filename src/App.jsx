@@ -6,23 +6,25 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import Publications from './components/Publications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen flex flex-col bg-cyber-bg text-cyber-textBright transition-colors duration-200 selection:bg-cyan-400 selection:text-slate-950">
-        {/* Fixed Header / Navbar */}
+      <div className="min-h-screen flex flex-col transition-colors duration-300">
+        {/* Navigation Bar */}
         <Navbar />
 
-        {/* Main Content Sections */}
-        <main className="flex-1">
+        {/* Main Content Sections with Box Architecture */}
+        <main className="flex-1 space-y-4 sm:space-y-6">
           <Hero />
           <About />
           <Skills />
           <Experience />
           <Projects />
+          <Publications />
           <Contact />
         </main>
 
