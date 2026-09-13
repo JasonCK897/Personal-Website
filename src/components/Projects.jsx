@@ -17,14 +17,18 @@ export default function Projects() {
     : projectsData.filter(p => p.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 bg-slate-900/30 dark:bg-cyber-surface/40 transition-colors duration-200">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-24 bg-white dark:bg-[#070B12] transition-colors duration-200 relative overflow-hidden">
+      {/* Subtle Background Glow for Projects Section */}
+      <div className="absolute top-1/2 -right-40 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
           <div>
-            <div className="text-xs font-mono font-semibold text-cyan-500 uppercase tracking-widest mb-1">
-              // 04. SHOWCASE
+            <div className="text-xs font-mono font-semibold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mb-1.5 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span>// 04. SHOWCASE</span>
             </div>
             <h2 className="section-title">
               Featured Projects
@@ -37,10 +41,10 @@ export default function Projects() {
               <button
                 key={opt.id}
                 onClick={() => setActiveFilter(opt.id)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-space font-medium transition-all ${
+                className={`px-3 py-1.5 rounded-xl text-xs font-space font-medium transition-all ${
                   activeFilter === opt.id
                     ? 'bg-cyan-500 text-slate-950 font-bold shadow-md shadow-cyan-500/20'
-                    : 'bg-white dark:bg-cyber-card text-slate-600 dark:text-cyber-textMuted border border-slate-200 dark:border-cyber-border hover:border-cyan-400/50'
+                    : 'bg-slate-100 dark:bg-[#0F1829] text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800 hover:border-cyan-400/50'
                 }`}
               >
                 {opt.label}
@@ -49,16 +53,16 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Project Cards Grid */}
+        {/* Project Cards Grid - Contrasting dark sapphire surfaces */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="bg-white dark:bg-cyber-card rounded-2xl border border-slate-200 dark:border-cyber-border hover:border-cyan-400 dark:hover:border-cyan-400/80 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col overflow-hidden group"
+              className="bg-slate-50 dark:bg-[#0C1424] rounded-2xl border border-slate-200/90 dark:border-slate-800 hover:border-cyan-400 dark:hover:border-cyan-400/80 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col overflow-hidden group"
             >
               
               {/* Visual Preview Header */}
-              <div className="relative h-48 bg-slate-950 overflow-hidden border-b border-slate-100 dark:border-cyber-border">
+              <div className="relative h-48 bg-slate-950 overflow-hidden border-b border-slate-200 dark:border-slate-800/80">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -82,9 +86,9 @@ export default function Projects() {
               </div>
 
               {/* Card Body */}
-              <div className="p-5 flex-1 flex flex-col justify-between">
+              <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="text-[11px] font-mono text-cyan-600 dark:text-cyan-400 font-medium mb-1">
+                  <div className="text-[11px] font-mono text-cyan-600 dark:text-cyan-400 font-semibold mb-1.5">
                     {project.role}
                   </div>
 
@@ -92,17 +96,17 @@ export default function Projects() {
                     {project.title}
                   </h3>
 
-                  <p className="text-xs text-slate-600 dark:text-cyber-textMuted leading-relaxed mb-4">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
                     {project.description}
                   </p>
 
-                  <div className="text-[11px] font-mono text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-cyber-surface px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-cyber-border/70 mb-4">
+                  <div className="text-[11px] font-mono text-slate-700 dark:text-slate-300 bg-white dark:bg-[#070D18] px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 mb-4">
                     {project.metrics}
                   </div>
                 </div>
 
                 {/* Card Action Link */}
-                <div className="pt-3 border-t border-slate-100 dark:border-cyber-border flex items-center justify-between">
+                <div className="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
                   <div className="flex flex-wrap gap-1">
                     {project.tags.slice(0, 3).map((tag) => (
                       <span

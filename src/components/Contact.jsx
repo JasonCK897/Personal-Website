@@ -74,30 +74,32 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-slate-900/40 dark:bg-cyber-bg/90 transition-colors duration-200 border-t border-slate-200 dark:border-cyber-border">
+    /* Alternating Band: Contrasting Command Station (#0B1220) */
+    <section id="contact" className="py-24 bg-slate-100/90 dark:bg-[#0B1220]/95 transition-colors duration-200 border-t border-slate-200 dark:border-cyan-500/15">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="mb-10">
-          <div className="text-xs font-mono font-semibold text-cyan-500 uppercase tracking-widest mb-1">
-            // 05. CONNECT
+        <div className="mb-12">
+          <div className="text-xs font-mono font-semibold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mb-1.5 flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+            <span>// 05. CONNECT</span>
           </div>
           <h2 className="section-title">
             Get in Touch
           </h2>
         </div>
 
-        {/* Two Columns Grid */}
+        {/* Two Contrasting Box Columns */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           
-          {/* Box 1: Contact Channels (Direct Clickable Links without Exposing Raw URLs) */}
-          <div className="bg-white dark:bg-cyber-card border border-slate-200 dark:border-cyber-border rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
+          {/* Box 1: Direct Channels Card */}
+          <div className="bg-white dark:bg-[#070D1A] border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
-              <h3 className="font-space font-semibold text-xl text-slate-900 dark:text-white tracking-normal mb-2 pb-3 border-b border-slate-100 dark:border-cyber-border">
+              <h3 className="font-space font-bold text-xl text-slate-900 dark:text-white tracking-normal mb-2 pb-3 border-b border-slate-100 dark:border-slate-800">
                 Direct Channels
               </h3>
               
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-cyber-textMuted leading-relaxed mb-6">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
                 Feel free to connect directly through any of these platforms. Click any card to open:
               </p>
 
@@ -111,17 +113,17 @@ export default function Contact() {
                       href={channel.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center justify-between p-4 rounded-xl bg-slate-50 dark:bg-cyber-surface border border-slate-200 dark:border-cyber-border hover:border-cyan-400 dark:hover:border-cyan-400 hover:shadow-md transition-all duration-200"
+                      className="group flex items-center justify-between p-4 rounded-2xl bg-slate-50 dark:bg-[#0D1527] border border-slate-200 dark:border-slate-800 hover:border-cyan-400 dark:hover:border-cyan-400 hover:shadow-md transition-all duration-200"
                     >
                       <div className="flex items-center gap-3.5">
-                        <div className="p-2.5 rounded-lg bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform">
+                        <div className="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform border border-cyan-500/20">
                           <Icon className="w-5 h-5" />
                         </div>
                         <div>
                           <div className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
                             {channel.label}
                           </div>
-                          <div className="text-xs text-slate-500 dark:text-cyber-textMuted font-mono">
+                          <div className="text-xs text-slate-500 dark:text-slate-400 font-mono">
                             {channel.subtitle}
                           </div>
                         </div>
@@ -134,20 +136,20 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-slate-100 dark:border-cyber-border text-xs text-slate-500 dark:text-slate-400 flex items-center justify-between font-mono">
+            <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 flex items-center justify-between font-mono">
               <span>Malang, East Java, Indonesia</span>
               <span>UTC+7 (WIB)</span>
             </div>
           </div>
 
-          {/* Box 2: Send Message Form */}
-          <div className="bg-white dark:bg-cyber-card border border-slate-200 dark:border-cyber-border rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
+          {/* Box 2: Send Message Form Card */}
+          <div className="bg-white dark:bg-[#070D1A] border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
-              <h3 className="font-space font-semibold text-xl text-slate-900 dark:text-white tracking-normal mb-2 pb-3 border-b border-slate-100 dark:border-cyber-border">
+              <h3 className="font-space font-bold text-xl text-slate-900 dark:text-white tracking-normal mb-2 pb-3 border-b border-slate-100 dark:border-slate-800">
                 Send a Message
               </h3>
               
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-cyber-textMuted leading-relaxed mb-6">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
                 Have a project proposal, research opportunity, or technical inquiry? Send a message directly:
               </p>
 
@@ -164,7 +166,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter your name"
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-cyber-border bg-slate-50 dark:bg-cyber-surface text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0D1527] text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
                   />
                 </div>
 
@@ -180,7 +182,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@example.com"
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-cyber-border bg-slate-50 dark:bg-cyber-surface text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0D1527] text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
                   />
                 </div>
 
@@ -196,7 +198,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Type your message, questions, or collaboration details here..."
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-cyber-border bg-slate-50 dark:bg-cyber-surface text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all resize-none"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0D1527] text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all resize-none"
                   ></textarea>
                 </div>
 
