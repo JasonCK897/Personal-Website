@@ -1,0 +1,187 @@
+﻿================================================================================
+           TEMPLATE DATA PORTOFOLIO & ENGINEERING SHOWCASE
+                       JASON CHRISTOV KESUMA
+================================================================================
+PETUNJUK PENGISIAN:
+1. Anda cukup mengisi atau mengubah data di bawah tanda petik atau di baris yang disediakan.
+2. Jika ada proyek atau jurnal baru, Anda bisa menyalin (copy-paste) format blok yang sudah disediakan.
+3. Untuk file gambar (screenshot proyek, diagram, foto sertifikat, dll.), simpan filenya di:
+   D:\PersonaWebsite\Website\public\projects\
+   atau sebutkan nama filenya di template ini.
+4. Setelah selesai mengisi dan menyimpan file ini, beritahu saya dan saya akan langsung membaca file ini untuk memperbarui seluruh isi website Anda!
+================================================================================
+
+--------------------------------------------------------------------------------
+BAGIAN 1: INFORMASI UTAMA & HERO SECTION (BIODATA)
+--------------------------------------------------------------------------------
+Nama Lengkap: Jason Christov Kesuma
+Gelar / Jurusan: Teknik Informatika
+Universitas: Universitas Ma Chung, Malang
+IPK Terkini: 3.49
+Tagline Profesi: Full-Stack Web Engineering, Embedded Systems & Intelligent Computing
+Status Ketersediaan: AVAILABLE FOR PROJECTS & RESEARCH
+Lokasi: Malang, Indonesia
+Bio Singkat: 
+Informatics student and multi-disciplinary engineer bridging hardware, modern web platforms, and intelligent machine interfaces. Passionate about solving real-world challenges from low-level microcontrollers to responsive full-stack applications.
+
+File CV: Jason Christov Kesuma_CV.pdf (atau tautan Google Drive / link PDF jika ada)
+
+
+--------------------------------------------------------------------------------
+BAGIAN 2: DAFTAR PROYEK (PROJECT LIST)
+Salin blok di bawah jika ingin menambahkan proyek baru:
+--------------------------------------------------------------------------------
+
+[PROYEK 1]
+Nama Proyek: AiDiTech Research Portal & CMS
+Kategori: Web Engineering (Pilihan: Web Engineering / Embedded Systems / ML & Assistive Tech / Web3 & Blockchain)
+Deskripsi Singkat: Web portal terpadu untuk pengarsipan dan manajemen data riset akademik dan artikel teknologi.
+Teknologi yang Digunakan: React.js, Tailwind CSS, Node.js, Express, PostgreSQL
+Tautan GitHub: https://github.com/JasonCK897/... (atau tulis: Private jika repo privat)
+Tautan Live Demo: (Kosongkan jika tidak ada, atau isi link live)
+Nama File Gambar: aiditech_preview.png (simpan di D:\PersonaWebsite\Website\public\projects\)
+Poin Pencapaian / Fitur Kunci:
+- Dashboard CMS interaktif dengan sistem otentikasi role-based
+- API performa tinggi untuk pencarian data dokumen dan artikel
+- Desain responsif modern yang dioptimalkan untuk desktop dan mobile
+
+[PROYEK 2]
+Nama Proyek: Project Shasta & Aroguard Firmware
+Kategori: Embedded Systems
+Deskripsi Singkat: Sistem firmware berbasis mikrokontroler STM32 dan ESP32 dengan telemetri sensor real-time nirkabel.
+Teknologi yang Digunakan: C/C++, FreeRTOS, STM32 HAL, ESP32, UART/I2C/SPI, MQTT
+Tautan GitHub: https://github.com/JasonCK897/... (atau tulis: Private)
+Tautan Live Demo: (Kosongkan jika tidak ada)
+Nama File Gambar: shasta_firmware.png
+Poin Pencapaian / Fitur Kunci:
+- Pengambilan data sensor presisi tinggi dengan filter sinyal digital (noise filtering)
+- Komunikasi telemetri real-time dengan konsumsi daya rendah
+- Integrasi fail-safe recovery untuk stabilitas sistem jangka panjang
+
+[PROYEK 3]
+Nama Proyek: HMI Assistive Interface & Gesture Recognition Suite
+Kategori: ML & Assistive Tech
+Deskripsi Singkat: Perangkat antarmuka interaksi manusia-mesin berbasis AI untuk membantu pengguna disabilitas motorik.
+Teknologi yang Digunakan: Python, PyTorch, MediaPipe, OpenCV, Micro-ROS, NumPy
+Tautan GitHub: https://github.com/JasonCK897/...
+Tautan Live Demo: (Kosongkan jika tidak ada)
+Nama File Gambar: hmi_assistive.png
+Poin Pencapaian / Fitur Kunci:
+- Deteksi gestur adaptif dengan akurasi pengenalan tinggi
+- Latensi pemrosesan data di bawah 35ms untuk kendali langsung perangkat
+- Diteliti dan diuji di Pusat Studi HMI Universitas Ma Chung
+
+[PROYEK 4]
+Nama Proyek: Sui Blockchain Decentralized Library Registry
+Kategori: Web3 & Blockchain
+Deskripsi Singkat: Smart contract terdesentralisasi untuk verifikasi lisensi dan aset digital pada jaringan Sui Network.
+Teknologi yang Digunakan: Sui Move, Rust, TypeScript, Sui SDK, Cryptography
+Tautan GitHub: https://github.com/JasonCK897/...
+Tautan Live Demo: (Kosongkan jika tidak ada)
+Nama File Gambar: sui_move_library.png
+Poin Pencapaian / Fitur Kunci:
+- Smart contract Move tahan serangan re-entrancy dengan keamanan tinggi
+- Pencatatan transaksi buku dan verifikasi kepemilikan transparan on-chain
+- Integrasi wallet web client yang mulus
+
+[PROYEK 5 - TAMBAHAN (Hapus jika tidak digunakan)]
+Nama Proyek: (Isi nama proyek baru)
+Kategori: (Web Engineering / Embedded Systems / ML & Assistive Tech / Web3 & Blockchain)
+Deskripsi Singkat: ...
+Teknologi yang Digunakan: ...
+Tautan GitHub: ...
+Tautan Live Demo: ...
+Nama File Gambar: ...
+Poin Pencapaian / Fitur Kunci:
+- Poin 1
+- Poin 2
+- Poin 3
+
+
+--------------------------------------------------------------------------------
+BAGIAN 3: JURNAL & PUBLIKASI RISET (RESEARCH & PUBLICATIONS)
+--------------------------------------------------------------------------------
+
+[JURNAL 1]
+Judul Makalah / Publikasi: Evaluation of Adaptive Human-Machine Interaction Protocols in Assistive Hardware
+Status Naskah: Manuscript in Preparation (Pilihan: Published / Under Peer Review / Manuscript in Preparation)
+Nama Jurnal / Forum Ilmiah: Pusat Studi HMI Universitas Ma Chung (atau nama jurnal target)
+Tahun Publikasi / Riset: 2026
+Afiliasi Laboratorium: Ma Chung Human-Machine Interaction (HMI) Study Center
+Tautan Dokumen / DOI: (Kosongkan jika belum terbit, atau isi link preprint/DOI)
+Abstrak / Deskripsi Singkat:
+Studi empiris mengenai respons latensi sinyal dan ergonomi sensorik pada perangkat bantuan pengguna dengan disabilitas gerak. Fokus riset mencakup perancangan protokol komunikasi mikro dan optimasi filter noise untuk kendali presisi tinggi.
+File Lampiran Gambar / Diagram: journal_diagram1.png (opsional)
+
+[JURNAL 2]
+Judul Makalah / Publikasi: Robust Sensor Telemetry Architecture for Resource-Constrained Microcontrollers
+Status Naskah: Experimental Verification Completed (Pilihan: Published / Under Peer Review / Manuscript in Preparation)
+Nama Jurnal / Forum Ilmiah: Engineering & Embedded Systems Research Repository
+Tahun Publikasi / Riset: 2025 - 2026
+Afiliasi Laboratorium: Embedded Computing & HMI Lab
+Tautan Dokumen / DOI: (Kosongkan jika belum ada)
+Abstrak / Deskripsi Singkat:
+Analisis kinerja throughput dan stabilitas komunikasi UART/SPI berkecepatan tinggi pada mikrokontroler STM32 dengan implementasi buffer melingkar (circular buffer) dan penanganan interupsi deterministik.
+File Lampiran Gambar / Diagram: journal_diagram2.png (opsional)
+
+[JURNAL 3 - TAMBAHAN (Hapus jika tidak digunakan)]
+Judul Makalah / Publikasi: ...
+Status Naskah: ...
+Nama Jurnal / Forum Ilmiah: ...
+Tahun Publikasi / Riset: ...
+Afiliasi Laboratorium: ...
+Tautan Dokumen / DOI: ...
+Abstrak / Deskripsi Singkat: ...
+File Lampiran Gambar / Diagram: ...
+
+
+--------------------------------------------------------------------------------
+BAGIAN 4: PENGALAMAN & ORGANISASI (EXPERIENCE)
+--------------------------------------------------------------------------------
+
+[PENGALAMAN 1]
+Posisi / Jabatan: Head of Event & Logistics
+Organisasi / Divisi: Informatics Festival & Campus Technology Exhibition
+Periode: 2024 - Present
+Lokasi: Malang, Indonesia
+Tipe / Tag: LEADERSHIP
+Deskripsi Singkat: Memimpin perencanaan logistik, kepanitiaan, dan koordinasi pameran teknologi tingkat universitas.
+Poin Pencapaian:
+- Mengoordinasikan lebih dari 30+ staf operasional dan teknis pameran
+- Mengelola jadwal pertunjukan hardware demo dan instalasi web interaktif
+
+[PENGALAMAN 2]
+Posisi / Jabatan: Undergraduate Research Assistant
+Organisasi / Divisi: Human-Machine Interaction (HMI) Study Center
+Periode: 2023 - Present
+Lokasi: Malang, Indonesia
+Tipe / Tag: RESEARCH
+Deskripsi Singkat: Berpartisipasi dalam riset eksperimental sensorik, akuisisi data, dan integrasi prototipe cerdas.
+Poin Pencapaian:
+- Mengembangkan modul pengujian sinyal untuk hardware bantu disabilitas
+- Menyusun dokumentasi teknis dan naskah riset publikasi laboratorium
+
+[PENGALAMAN 3 - TAMBAHAN (Hapus jika tidak digunakan)]
+Posisi / Jabatan: ...
+Organisasi / Divisi: ...
+Periode: ...
+Lokasi: ...
+Tipe / Tag: ...
+Deskripsi Singkat: ...
+Poin Pencapaian:
+- Poin 1
+- Poin 2
+
+
+--------------------------------------------------------------------------------
+BAGIAN 5: KONTAK & MEDIA SOSIAL
+--------------------------------------------------------------------------------
+Email Kontak: jasonchristovkesuma@gmail.com
+LinkedIn URL: https://www.linkedin.com/in/jason-christov-kesuma/
+GitHub URL: https://github.com/JasonCK897
+Instagram URL: https://www.instagram.com/j._chrisk/
+Formspree Endpoint ID: (Biarkan default jika belum ada akun baru)
+
+================================================================================
+SELESAI. Simpan file ini setelah Anda mengisi atau mengedit datanya.
+================================================================================
